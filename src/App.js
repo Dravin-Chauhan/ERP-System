@@ -1,37 +1,30 @@
-import './App.css';
-import CollapsibleSidebar from './components/Collapsible-Sidebar'
-import CreateForm from './components/ClientCreation-Form';
-import { BrowserRouter as Router , Route ,Routes } from 'react-router-dom';
-import Header from './components/Header';
+import { Fragment } from 'react';
+
+import './index.css';
 import PageHeader from './components/PageHeader';
-import CIMSTable from './components/ReadTable';
+import ContactDetails from './components/ContactDetails';
+import ReadTable from './components/ReadTable';
+import CreateForm from './components/ClientCreation-Form';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
 function App() {
-  return (    
-    <div>
-        <>
-          <Header/>
-          <CollapsibleSidebar/>    
-        </>
-        
-        <Router>
-          <Routes>
-          <Route exact path='/' element={
-                                          <>
-                                            <PageHeader />
-                                            <CIMSTable/>
-                                          </>} >
+  return (
+    <Fragment>
+      <PageHeader />
+      {/* <BrowserRouter> */}
+        <Routes>
+          <Route path='/' exact element={<ReadTable/>}>
+            
           </Route>
-
-          <Route path='/createclient' element={<>
-                                            <PageHeader />
-                                            <CreateForm/>
-                                          </>} >
+          <Route path='/cdetails' exact element={<ContactDetails/>}>
+            
           </Route>
-
+          <Route path='/create' exact element={<CreateForm/>}>
+            
+          </Route>
         </Routes>
-      </Router>
-    </div>
+      {/* </BrowserRouter> */}
+    </Fragment>
   );
 }
 
