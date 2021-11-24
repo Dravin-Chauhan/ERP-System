@@ -7,13 +7,10 @@ import {Button,
         Select,
         Typography} from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import {Link} from 'react-router-dom'
-
 
 const useStyles = makeStyles({
     menu: {
-        marginTop: '6rem',
-        marginRight: '5rem'
+        marginTop: '1rem',
     },
     userAdmin: {
         textAlign: 'right',
@@ -22,10 +19,6 @@ const useStyles = makeStyles({
     buttons: {
         marginTop: '0.5rem',
         marginLeft: '25%',
-    },
-    cimstext:{
-        position:'absolute',
-        left:'16%'
     }
 });
 
@@ -60,18 +53,15 @@ export default function PageHeader() {
                     justifyContent="space-between"
                     container 
                 >
-                    <Grid item >
-                        <Typography variant="h4" className={classes.cimstext}>
+                    <Grid item>
+                        <Typography variant="h4">
                             CIMS
                         </Typography>
                     </Grid>
                     <Grid item>
-                        <Link to='/createclient'>
-                            
-                            <Button variant="contained" style={{backgroundColor: 'chocolate'}}>
-                                Create a customer
-                            </Button>
-                        </Link>
+                        <Button href='/create' variant="contained" style={{backgroundColor: 'chocolate'}}>
+                            Create a customer
+                        </Button>
                         <FormControl size="small" sx={{ minWidth: 120, margin: '0 2.5rem 0 1rem' }}>
                             <InputLabel id="sortBy">sort by</InputLabel>
                             <Select labelId="sortBy"
