@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+CIMSTable.js
+
 
 # testing
 /coverage
