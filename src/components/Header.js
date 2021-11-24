@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { AppBar,
         Toolbar,
         FormControl,
@@ -51,8 +52,15 @@ export default function Header() {
 
     const leftMenu = (
         <div>
+            {/* <Link to="/">
                 <HomeRoundedIcon sx={iconStyle} />
-
+            </Link>
+            <Link to="/">
+                <ArrowBackRoundedIcon sx={iconStyle} />
+            </Link>
+            <Link to="/">
+                <ArrowForwardRoundedIcon sx={iconStyle} />
+            </Link> */}
         </div>
     );
 
